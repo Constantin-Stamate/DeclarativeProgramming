@@ -54,25 +54,109 @@ This repository contains scripts and operations for laboratory exercises of the 
         - Combined visualizations of boxplots and pairwise plots.
     - Custom functions for automating analysis and class-based exploration.
 
+## Lab 5 — Higher-order functions and anonymous functions
+
+- Goal: Understanding and using higher-order functions such as `map()`, `filter()`, `reduce()`, and anonymous functions (`lambda`) for solving Python programming tasks.
+- Contents (summary):
+    - Dictionary definition and manipulation using string keys and float values.
+    - Random number generation and conversion of seconds into the `hh:mm:ss` time format.
+    - Lambda-based computation of sums and differences between float values.
+    - Application of `map()` together with lambda functions on different data types.
+    - Extraction of distinct integer values from a list using `filter()`.
+    - Occurrence counting of a character in a string using `reduce()`.
+    - String concatenation using a function that accepts a variable number of inputs.
+    - Lambda function list creation for:
+        - returning the second character of a string,
+        - converting a string to uppercase,
+        - determining the position of a specified character.
+    - Average calculation of three grades using default values when arguments are missing.
+    - Recursive computation of the sum of the first N natural numbers.
+
+## Lab 6 — Automated data collection
+
+- Goal: Understanding web scraping with Python and using it to collect data from websites in an automated way.
+- Contents (summary):
+    - Introduction to web scraping and the limitations some websites impose on automated access.
+    - Retrieving the HTML code of a web page using `requests` or `urlopen()`.
+    - Parsing HTML structure with `BeautifulSoup` and selecting relevant elements.
+    - Handling legal and technical considerations for responsible scraping.
+    - Installing required Python libraries:
+        - `requests`
+        - `lxml`
+        - `beautifulsoup4`
+    - Working with BeautifulSoup:
+        - `soup = BeautifulSoup(html, "html.parser")`
+        - Accessing elements via tags, classes, and attributes.
+        - Filtering and extracting specific data such as titles, headings, images, ratings, prices, or weather information.
+    - Sending HTTP requests with custom headers to avoid blocks:
+        - `requests.get(URL, headers={"User-Agent":"Mozilla/5.0"})`
+    - Looping through multiple pages or sections to collect all relevant data.
+    - Storing extracted data in Python lists and exporting to `.csv` files.
+
+## Lab 7 — Manipulating data with Pandas
+
+- Goal: Learn to import, explore, and manipulate climate data using the Pandas library in Python.
+- Contents (summary):
+    - Introduction to Pandas for data manipulation.
+    - Importing climate data from CSV files.
+    - Understanding the structure of DataFrames and basic descriptive statistics.
+    - Handling missing values and duplicates.
+    - Separating metadata (station info) from measurement data.
+    - Setting meaningful indexes for DataFrames.
+    - Joining and combining DataFrames based on keys.
+    - Filtering data by conditions (e.g., altitude, temperature thresholds).
+    - Aggregating data: finding min, max, mean values.
+    - Working with subsets: selecting data for specific stations or time periods.
+
+## Lab 8 — Numerical & symbolic computation with NumPy, SciPy and SymPy
+
+- Goal: Learn to perform numerical, symbolic, and scientific computations in Python using the NumPy, SciPy, and SymPy libraries.
+- Contents (summary):
+    - Introduction to symbolic mathematics with SymPy.
+    - Working with arbitrary precision numbers.
+    - Rational arithmetic and exact computations.
+    - Polynomial expansion and algebraic simplification.
+    - Manipulating trigonometric expressions.
+    - Computing limits, derivatives, and solving equations.
+    - Systems of linear equations.
+    - Boolean logic and satisfiability checking.
+    - Differential equations (Bernoulli equation).
+    - Numerical integration with SciPy (`quad`).
+    - Fourier transform, generating and analyzing signals.
+    - Optimization problems using `scipy.optimize.fmin`.
+    - Image manipulation using `scipy.ndimage`: rotation, resolution changes, noise, filtering.
+    - Comparing performance of Gaussian, median, and Wiener filters.
+
 ## Installation
 
-1. Install R (if not already): https://cran.r-project.org/
+1. Install Python (if not already): https://www.python.org/downloads/
+2. Install Jupyter Notebook: `pip install notebook`
+3. Install R (if not already): https://cran.r-project.org/
+4. Open a terminal in the project folder.
 
-2. Open a terminal in the project folder.
+### Run a Python script
 
-3. Run an R script with `Rscript` or load it inside an interactive R/RStudio session.
+1. Example (PowerShell / Command Prompt):
+python .\Lab6\AutomaticDataCollection\src\book_scraper.py
 
-Example (PowerShell):
+2. Example (Linux/macOS):
+python3 ./Lab6/AutomaticDataCollection/src/book_scraper.py
 
-```powershell
+### Run a Jupyter Notebook
+
+1. Start Jupyter Notebook in the project folder:
+jupyter notebook
+
+2. Navigate to the folder and open the desired `.ipynb` file in your browser.
+3. Run cells with Shift + Enter.
+
+### Run an R script
+
+1. Example (PowerShell):
 Rscript .\Lab1\IntroDataStructures\src\matrix_analysis.R
-```
 
-Example (R):
-
-```r
+2. Example (R interactive session):
 source("Lab1/IntroDataStructures/src/matrix_analysis.R")
-```
 
 ## Notes
 
@@ -81,8 +165,9 @@ source("Lab1/IntroDataStructures/src/matrix_analysis.R")
 
 ## Technologies
 
-- Language: R
-- Editor: Visual Studio Code (with R extension)
+- Languages: R, Python
+- Notebook: Jupyter Notebook
+- Editor: Visual Studio Code (with R and Python extensions)
 
 ## Author
 
